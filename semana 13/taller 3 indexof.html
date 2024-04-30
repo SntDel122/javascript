@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO INDEXOF</h1>
+        <h2>BUSQUEDA DE ELEMENTOS EN ARRAYS</h2>
+        <BR></BR>
+        <P>Estudiante se encuentra en el indice No.</P>
+        <p id="std"></p>
+        <script>
+            let num;
+            let std=new Array();
+            //captura
+            num=parseInt(prompt("ingrese tope maximo de array"));
+            //captura
+            for(i=0;i<num;i++){
+                std[i]=prompt("ingrese nombre"+i)
+            }
+            //buscar nombre en array
+            let datob=prompt("ingrese nombre a buscar");
+            let find=std.indexOf(datob.trim());// indexof es para buscar y trim es para eliminar los espacions a la izquierda a la derecha osea elimina los espacios innecesarios
+            //condicional para verificar la localizacion
+            if(find>-1){
+                //el indexof genera dos valores 0 cuando lo encuentra y -1 cuando no
+                document.getElementById("std").innerHTML=find+"..."+datob;
+                swal("apreciado usuario","dato encontrado..","success");
+            }else{
+                document.getElementById("std").innerHTML="ERROR... nombre no encontrado"+datob;
+                swal("apreciado usuario","dato no encontrado..","error");
+            }
+        </script>
+    </center>
+</body>
+</html>
