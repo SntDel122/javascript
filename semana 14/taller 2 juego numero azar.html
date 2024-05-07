@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuesta Random</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./css/random.css">
+    <script src="./js/numero random.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Apuestas Vacanalay</h1>
+        <h2>Ingrese Numero del 1 al 100</h2>
+        <br><br>
+        <form action="">
+            <label for="">Numero Apostado</label>
+            <input type="text" id="apostado" disabled>
+            <br><br>
+            <label for="">Numero Generado al Azar</label>
+            <input type="text" id="resultado" disabled>
+            <br><br>
+            <label for="">Resultado Apuesta</label>
+            <input type="text" id="salida" disabled>
+        </form>
+        <br><br>
+        <div id="buttom">
+            <button onclick="apostar()">Apostar!!</button>
+            <button onclick="cancelar()">Borrar!!</button>
+        </div>
+    </center>
+</body>
+</html>
